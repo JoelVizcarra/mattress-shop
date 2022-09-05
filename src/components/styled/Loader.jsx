@@ -1,5 +1,5 @@
-import React from "react";
-import styled, { keyframes } from "styled-components";
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 
 const rotate = keyframes`
   0% {
@@ -21,7 +21,7 @@ const Spinner = styled.div`
 
 const LoaderContainer = styled.div`
   height: 100%;
-  backeground-color: white;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@ const LoaderContainer = styled.div`
 const Loader = () => {
   return (
     <LoaderContainer>
-      <Spinner />;
+      <Spinner />
     </LoaderContainer>
   );
 };

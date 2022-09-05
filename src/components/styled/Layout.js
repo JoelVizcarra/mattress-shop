@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const Box = styled.div`
   ${({ fullWidth }) =>
@@ -6,14 +6,19 @@ export const Box = styled.div`
     css`
       width: 100%;
     `}
+  ${({ flexGrow }) =>
+    flexGrow &&
+    css`
+      flex-grow: ${flexGrow};
+    `}
 `;
 
 export const Flex = styled(Box)`
   display: flex;
-  ${({ flexDirection }) => `flex-direction: ${flexDirection || "row"};`}
+  ${({ flexDirection }) => `flex-direction: ${flexDirection || 'row'};`}
   ${({ justifyContent }) =>
-    `justify-content: ${justifyContent || "flex-start"};`}
-	${({ alignItems }) => `align-items: ${alignItems || "stretch"};`}
+    `justify-content: ${justifyContent || 'flex-start'};`}
+	${({ alignItems }) => `align-items: ${alignItems || 'stretch'};`}
 `;
 
 export const Container = styled(Box)`

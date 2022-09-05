@@ -1,10 +1,10 @@
-import React, { useState, useCallback } from "react";
-import styled from "styled-components";
+import React, { useState, useCallback } from 'react';
+import styled from 'styled-components';
 
-import { Container, BadgedIcon, Flex } from "./styled";
-import { ReactComponent as SaatvaLogo } from "../assets/svg/saatva-logo.svg";
-import { ReactComponent as KartIcon } from "../assets/svg/kart-icon.svg";
-import { useKart } from "../context/Kart";
+import { Container, BadgedIcon, Flex } from './styled';
+import { ReactComponent as SaatvaLogo } from '../assets/svg/saatva-logo.svg';
+import { ReactComponent as KartIcon } from '../assets/svg/kart-icon.svg';
+import { useKart } from '../context/Kart';
 
 const StyledNavbar = styled.div`
   background-color: white;
@@ -29,17 +29,6 @@ const StyledKartIcon = styled(KartIcon)`
   &:hover {
     fill: ${({ theme }) => theme.palette.primary};
   }
-
-  &::after {
-    display: block;
-    content: "${({ count }) => count}";
-    position: relative;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-    heigth: 10px;
-    width: 10px;
-  }
 `;
 
 const Navbar = () => {
@@ -52,7 +41,12 @@ const Navbar = () => {
           <a href="/">
             <StyledSatvaLogo />
           </a>
-          <BadgedIcon icon={<StyledKartIcon />} content={itemCount} />
+          {/* TODO: Add a test ID to the badge count */}
+          <BadgedIcon
+            icon={<StyledKartIcon />}
+            content={itemCount}
+            testId="nav-kart-item-count"
+          />
         </Flex>
       </Container>
     </StyledNavbar>

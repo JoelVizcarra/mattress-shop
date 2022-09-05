@@ -1,11 +1,12 @@
-import React, { useState, createContext, useContext, useCallback } from "react";
+import React, { useState, createContext, useContext, useCallback } from 'react';
 
-const KartContext = createContext();
+export const KartContext = createContext();
 
 const KartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
   const [itemCount, setItemCount] = useState(0);
 
+  // TODO: create deleteItem function
   const addItem = useCallback(
     (newItem) => {
       setItemCount((itemCount) => itemCount + 1);
@@ -30,7 +31,7 @@ const KartProvider = ({ children }) => {
 const useKart = () => {
   const context = useContext(KartContext);
   if (context === undefined) {
-    throw new Error("useKart must be used within a KartProvider");
+    throw new Error('useKart must be used within a KartProvider');
   }
   return context;
 };

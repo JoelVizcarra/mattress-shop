@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { Flex } from "./Layout";
+import { Flex } from './Layout';
 
 const StyledFlex = styled(Flex)`
   position: relative;
@@ -27,12 +27,12 @@ const Count = styled.span`
   font-weight: 300;
 `;
 
-const BadgedIcon = ({ icon, content }) => {
+const BadgedIcon = ({ icon, content, testId }) => {
   return (
     <StyledFlex>
       {icon}
       <Badge>
-        <Count>{content}</Count>
+        <Count data-testid={testId}>{content}</Count>
       </Badge>
     </StyledFlex>
   );

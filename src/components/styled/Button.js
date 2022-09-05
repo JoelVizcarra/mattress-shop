@@ -1,12 +1,11 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 const Button = styled.button`
-  font-family: "SF Pro Display";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.75px;
-  padding: 8px;
+  padding: 10px;
   cursor: pointer;
   border: none;
 
@@ -17,25 +16,25 @@ const Button = styled.button`
     `}
 
   ${({ theme, variant }) =>
-    variant === "primary" &&
+    variant === 'primary' &&
     css`
       color: white;
       background-color: ${theme.palette.primary};
     `}
 
   ${({ theme, variant }) =>
-    variant === "secondary" &&
+    variant === 'secondary' &&
     css`
       color: white;
       background-color: ${theme.palette.secondary};
     `};
 
   ${({ theme, variant }) =>
-    variant === "ternary" &&
+    variant === 'ternary' &&
     css`
       color: ${theme.palette.secondary};
       background-color: white;
-      border: 1px solid ${theme.palette.secondary};
+      border: 1px solid ${theme.palette.tertiary};
     `};
 `;
 
