@@ -19,7 +19,7 @@ Launches the test runner in the interactive watch mode.
 
 ### `yarn e2e`
 
-Launches cypress for the end to end test.
+Launches cypress for the end to end test (for the e2e test you must first run `yarn dev`).
 
 ### `yarn build`
 
